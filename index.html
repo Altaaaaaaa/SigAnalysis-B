@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>Sigtime</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <div style="text-align: center;">
+      <h1>SigTime output analysis result</h1>
+
+      <h2>mutational process</h2>
+      <p>
+        This represents the result of Sigprofiler.<br>
+      </p>
+      <div class="n-ex">
+        <br>
+        <img src="5.png">
+        <p style="text-align: left;">
+          <br>
+          Identifying the number, <b>N</b>, of mutational processes operative in a set of cancer genomes is required
+          prior to deciphering their signatures. For every N, we evaluate the similarity between the extracted 
+          processes (i.e., <b>process reproducibility</b>) from stochastically initialized iterations.
+          <br>For every N, we approach assesses the average Frobenius reconstruction error of the averaged 
+          deciphered signatures P and their strengths E. Low reconstruction error is indicative of an accurate 
+          description of the original cancer genome catalogs. We select the value of N for <b>which the extracted 
+          processes are reproducible and the reconstruction error is low.</b>
+          <br>In that set, the reconstruction error is the lowest when N is 3,
+          <br>so <b>the value of N was selected as 3.<b>
+          <br>
+        </p>
+      </div>
+      <h3>Sigprofiler output(N=3)</h3>
+      <div class="slider-1">
+        <div class="slides">
+            <div class="active" style="background-image:url(4.png); height: 520px;"></div>
+            <div style="background-image:url(1.png); height: 520px;"></div>
+            <div style="background-image:url(2.png); height: 520px;"></div>
+            <div style="background-image:url(3.png); height: 520px;"></div>
+        </div>
+        <div class="page-btns">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="side-btns">
+            <div>
+                <span><i class="fas fa-angle-left"></i></span>
+            </div>
+            <div>
+                <span><i class="fas fa-angle-right"></i></span>
+            </div>
+        </div>
+        <div class="figure-ex">
+          <div class="active"><div style="font-weight: bolder;">Figure 1</div>mutations in genomes for samples</div>
+          <div><div style="font-weight: bolder;">Figure 2. Signature 1 of 3</div>Three mutational signatures deciphered from the base substitutions identified in samples.</div>
+          <div><div style="font-weight: bolder;">Figure 3. Signature 2 of 3</div>Three mutational signatures deciphered from the base substitutions identified in samples.</div>
+          <div><div style="font-weight: bolder;">Figure 4. Signature 3 of 3</div>Three mutational signatures deciphered from the base substitutions identified in samples.</div>
+        </div>
+        
+    </div>
+      <br><br><hr width="1500px"><br>
+      <h2>timeseries analysis</h2>
+      <div class="timeseries-ex"style="text-align: left;">
+        As mentioned above, we used <b>data deciphered into three signatures</b>. Then, <b>contributions to the 
+        signature for each mutation type</b> were used to find out which signature was caused by more 
+        operative for each mutation.
+        <br>
+        For each signature, the sum of the signatures of the gene can be calculated using the deciphering. 
+        We used the analysis results calculated from <b>DESeq</b>, which showed <b>logFC values measured at each 
+        time points</b>. Using this, we can represent patterns of gene expression at time points.
+        <br>
+        As a result, we <b>analyzed the timeseries by calculating the correlation between this pattern and each 
+        signature in samples.</b>
+      </div>
+      <p>
+        timeseries analysis of SAMPLE1&nbsp;&nbsp;=>&nbsp;&nbsp;
+        <a href="NewMat_S1.csv">file1</a>
+        <br>
+        timeseries analysis of SAMPLE2&nbsp;&nbsp;=>&nbsp;&nbsp;
+        <a href="NewMat_S2.csv">file2</a>
+        <br><br>
+        From the timeseries analysis of the samples, only the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b> were selected.
+      </p>
+      <br>
+      <div class="container">
+
+        <ul class="tabs">
+          <li class="tab-link current" data-tab="tab-1">Sample1 SIGNATURE 0</li>
+          <li class="tab-link" data-tab="tab-2">Sample1 SIGNATURE 1</li>
+          <li class="tab-link" data-tab="tab-3">Sample1 SIGNATURE 2</li>
+          <li class="tab-link" data-tab="tab-4">Sample2 SIGNATURE 0</li>
+          <li class="tab-link" data-tab="tab-5">Sample2 SIGNATURE 1</li>
+          <li class="tab-link" data-tab="tab-6">Sample2 SIGNATURE 2</li>
+        </ul>
+      
+        <div id="tab-1" class="tab-content current">
+          <h3>Sample1 SIGNATURE 0</h3>
+          <div class="table0"></div>
+          <p>
+            In Signature0 of Sample1, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
+          </p>
+          <br>
+          <div id="my_dataviz0"></div>
+          <p>
+            Compare DESeq and mutation graphs at each TimePoint
+          </p>
+        </div>
+        <div id="tab-2" class="tab-content">
+          <h3>Sample1 SIGNATURE 1</h3>
+          <div class="table1"></div>
+          <p>
+            In Signature1 of Sample1, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
+          </p>
+          <br>
+          <div id="my_dataviz1"></div>
+          <p>
+            Compare DESeq and mutation graphs at each TimePoint
+          </p>
+        </div>
+        <div id="tab-3" class="tab-content">
+          <h3>Sample1 SIGNATURE 2</h3>
+          <div class="table2"></div>
+          <p>
+            In Signature2 of Sample1, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
+          </p>
+          <br>
+          <div id="my_dataviz2"></div>
+          <p>
+            Compare DESeq and mutation graphs at each TimePoint
+          </p>  
+        </div>
+        <div id="tab-4" class="tab-content">
+          <h3>Sample2 SIGNATURE 0</h3>
+          <div class="table3"></div>
+          <p>
+            In Signature0 of Sample2, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
+          </p>
+          <br>
+          <div id="my_dataviz_0"></div>
+          <p>
+            Compare DESeq and mutation graphs at each TimePoint
+          </p>
+        </div>
+        <div id="tab-5" class="tab-content">
+          <h3>Sample2 SIGNATURE 1</h3>
+          <div class="table4"></div>
+          <p>
+            In Signature1 of Sample2, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
+          </p>
+          <br>
+          <div id="my_dataviz_1"></div>
+          <p>
+            Compare DESeq and mutation graphs at each TimePoint
+          </p>
+        </div>
+        <div id="tab-6" class="tab-content">
+          <h3>Sample2 SIGNATURE 2</h3>
+          <div class="table5"></div>
+          <p>
+            In Signature2 of Sample2, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
+          </p>
+          <br>
+          <div id="my_dataviz_2"></div>
+          <p>
+            Compare DESeq and mutation graphs at each TimePoint
+          </p>  
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="jquery.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+  </body>
+</html>

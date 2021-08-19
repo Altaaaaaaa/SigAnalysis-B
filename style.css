@@ -1,0 +1,263 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+html {
+  box-sizing: border-box;
+  font-size: 1rem;
+  background-color: #f9f9fd;
+  font-family: Nanum Gothic;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.table0,
+.table1,
+.table2,
+.table3,
+.table4,
+.table5 {
+  padding: 2rem 0;
+  padding-top: 0;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 200px;
+  overflow: auto;
+}
+
+table {
+  width: 5rem;
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0;
+  /* border-collapse: collapse; */
+  /* border: 1px solid #d4d4d4; */
+  border: 0px;
+}
+
+/* tr:nth-child(even) {
+background: #d4d4d4;
+} */
+
+td {
+  width: 5rem;
+  padding: 3px 3px;
+  border-bottom: 1px solid #444444;
+}
+
+th {
+  padding: 0 10px;
+  /* border-bottom: 1px solid #d4d4d4; */
+}
+
+thead {
+  position: sticky;
+  top: 0px;
+  background-color: #e4eff7;
+  padding: 0 10px;
+}
+
+.fixed1 th {
+  position: sticky;
+  top: 0px;
+  background-color: #e4eff7;
+  padding: 0 10px;
+  border: 1px solid #7e8b93;
+  border-bottom: 0;
+  /*border-left: 1px solid #999999;*/
+}
+
+.fixed2 th {
+  position: sticky;
+  top: 19px;
+  background-color: #e4eff7;
+  padding: 0 10px;
+  border: 1px solid #7e8b93;
+}
+
+tr {
+  border-spacing: 0px;
+  background-color: white;
+}
+
+h1 {
+  color: #696b7b;
+  font-weight: bold;
+  font-size: 230%;
+}
+h2 {
+  padding-top: 1rem;
+  color: #79686a;
+  font-weight: bold;
+  font-size: 200%;
+}
+h3 {
+  padding-top: 1rem;
+  color: #5f6f6e;
+  font-size: 150%;
+}
+h4 {
+  padding-top: 1rem;
+}
+p {
+    font-size: 120%;
+    font-weight: 100;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container p {
+    font-size: 100%;
+}
+
+ul.tabs {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+ul.tabs li {
+  background: none;
+  color: #222;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+ul.tabs li.current {
+  background: #ebedfa;
+  color: #222;
+}
+
+.tab-content {
+  display: none;
+  background: #ebedfa;
+  padding: 15px;
+}
+
+.tab-content.current {
+  display: inherit;
+}
+
+
+
+/* 슬라이더 1 시작 */
+.slider-1 {
+    height:590px;
+    width: 1000px;
+    margin: 20px auto; /*50px 400px;*/
+    position:relative;
+}
+
+/* 슬라이더 1 - 페이지 버튼 */
+.slider-1 > .page-btns {
+    text-align:center;
+    position:absolute;
+    bottom:90px;
+    left:0;
+    width:100%;
+}
+
+.slider-1 > .page-btns > div {
+    width:20px;
+    height:20px;
+    background-color:rgba(193, 214, 226, 0.5);
+    border-radius:4px;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.slider-1 > .page-btns > div.active {
+    background-color:#b4c7d2;
+}
+
+/* 슬라이더 1 - 슬라이드 */
+
+.slider-1 > .slides > div {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    opacity:0;
+    transition: opacity 0.3s;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.slider-1 > .slides > div.active {
+    opacity:1;
+}
+
+/* 슬라이더 좌우 버튼 */
+.slider-1 > .side-btns > div {
+    position:absolute;
+    top:0;
+    left:0;
+    width:10%;
+    height:100%;
+    cursor:pointer;
+}
+.slider-1 > .side-btns > div:last-child {
+    left:auto;
+    right:0;
+}
+.slider-1 >.side-btns > div > span {
+    position:absolute;
+    top:50%;
+    left:20px;
+    transform:translatey(-50%);
+    background-color:white;
+    opacity:0.5;
+    padding:1px 13px;
+    border-radius:50px;
+    font-size:25px;
+}
+.slider-1 >.side-btns > div:last-child > span {
+    left:auto;
+    right:20px;
+}
+
+.slider-1 > .figure-ex > div {
+    text-align:center;
+    position:absolute;
+    opacity:0;
+    bottom:20px;
+    left:0;
+    width:100%;
+}
+
+.slider-1 > .figure-ex > div.active {
+    opacity:1;
+}
+
+/* 슬라이더 1 끝 */
+
+.n-ex {
+    width: 80%;
+    height: 420px;
+    margin: 20px auto;
+}
+
+.n-ex img {
+    width: 700px;
+    float: left;
+}
+
+.n-ex p {
+    width: 40%;
+    float: left;
+    padding-left: 20px;
+}
+
+.timeseries-ex {
+    width: 60%;
+    margin: 20px auto;
+    font-size: 120%;
+    font-weight: 100;
+}
