@@ -1,5 +1,0 @@
-제일 위에 있는 img => selection plot => results/SBS96/SBS96_selection_plot.pdf
-
-슬라이드 첫번째 => results/SBS96/Suggested_Solution/SBS96_De-Novo_Solution/Activities/SBS96_De-Novo_Activity_Plots_refit.pdf (근데 개많음;; - 샘플 수 만큼 있음)
-
-슬라이드 넘기면 나오는것들(시그니쳐개수만큼있음) => results/SBS96/Suggested_Solution/SBS96_De-Novo_Solution/Signatures/SBS_96_plots_SBS96_De-Novo.pdf
