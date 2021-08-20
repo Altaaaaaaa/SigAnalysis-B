@@ -238,6 +238,16 @@ ul.tabs li.current {
 
 /* 슬라이더 1 끝 */
 
+.heatmap {
+    width: 80%;
+    height: 420px;
+    margin: 20px auto;
+}
+.heatmap img {
+    width: 1350px;
+    image-rendering: -webkit-optimize-contrast;
+}
+
 .n-ex {
     width: 80%;
     height: 420px;

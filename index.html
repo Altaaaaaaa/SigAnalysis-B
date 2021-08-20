@@ -2,6 +2,7 @@
 <html>
   <head>
       <meta charset="utf-8">
+      <meta name="viewport" content="target-densitydpi=device-dpi, user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
       <title>Sigtime</title>
   </head>
   <body>
@@ -16,7 +17,7 @@
       </p>
       <div class="n-ex">
         <br>
-        <img src="5.png">
+        <img src="/img/5.png">
         <p style="text-align: left;">
           <br>
           Identifying the number, <b>N</b>, of mutational processes operative in a set of cancer genomes is required
@@ -31,13 +32,14 @@
           <br>
         </p>
       </div>
+      <div>
       <h3>Sigprofiler output(N=3)</h3>
       <div class="slider-1">
         <div class="slides">
-            <div class="active" style="background-image:url(4.png); height: 520px;"></div>
-            <div style="background-image:url(1.png); height: 520px;"></div>
-            <div style="background-image:url(2.png); height: 520px;"></div>
-            <div style="background-image:url(3.png); height: 520px;"></div>
+            <div class="active" style="background-image:url(/img/4.png); height: 520px;"></div>
+            <div style="background-image:url(/img/1.png); height: 520px;"></div>
+            <div style="background-image:url(/img/2.png); height: 520px;"></div>
+            <div style="background-image:url(/img/3.png); height: 520px;"></div>
         </div>
         <div class="page-btns">
             <div class="active"></div>
@@ -59,6 +61,14 @@
           <div><div style="font-weight: bolder;">Figure 3. Signature 2 of 3</div>Three mutational signatures deciphered from the base substitutions identified in samples.</div>
           <div><div style="font-weight: bolder;">Figure 4. Signature 3 of 3</div>Three mutational signatures deciphered from the base substitutions identified in samples.</div>
         </div>
+      </div>
+      <div class="heatmap">
+      <h3>Each Signature / COSMIC cosine similarity</h3>
+      <img src="/img/Heatmap.png">
+      <p>
+        image<br>
+      </p>
+      </div>
         
     </div>
       <br><br><hr width="1500px"><br>
@@ -77,10 +87,10 @@
       </div>
       <p>
         timeseries analysis of SAMPLE1&nbsp;&nbsp;=>&nbsp;&nbsp;
-        <a href="NewMat_S1.csv">file1</a>
+        <a href="/data/NewMat_S1.csv">file1</a>
         <br>
         timeseries analysis of SAMPLE2&nbsp;&nbsp;=>&nbsp;&nbsp;
-        <a href="NewMat_S2.csv">file2</a>
+        <a href="/data/NewMat_S2.csv">file2</a>
         <br><br>
         From the timeseries analysis of the samples, only the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b> were selected.
       </p>
@@ -103,7 +113,7 @@
             In Signature0 of Sample1, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
           </p>
           <br>
-          <div id="my_dataviz0"></div>
+          <img src="/img/plot_0.png">
           <p>
             Compare DESeq and mutation graphs at each TimePoint
           </p>
@@ -115,7 +125,7 @@
             In Signature1 of Sample1, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
           </p>
           <br>
-          <div id="my_dataviz1"></div>
+          <img src="/img/plot_1.png">
           <p>
             Compare DESeq and mutation graphs at each TimePoint
           </p>
