@@ -2,32 +2,32 @@
 
 let count = 0;
 $.ajax({
-  url: "/data/NewMat_S1_Sig0.csv",
+  url: "./data/NewMat_S1_Sig0.csv",
   dataType: "text",
 }).done(successFunction);
 
 $.ajax({
-  url: "/data/NewMat_S1_Sig1.csv",
+  url: "./data/NewMat_S1_Sig1.csv",
   dataType: "text",
 }).done(successFunction);
 
 $.ajax({
-  url: "/data/NewMat_S1_Sig2.csv",
+  url: "./data/NewMat_S1_Sig2.csv",
   dataType: "text",
 }).done(successFunction);
 
 $.ajax({
-  url: "/data/NewMat_S2_Sig0.csv",
+  url: "./data/NewMat_S2_Sig0.csv",
   dataType: "text",
 }).done(successFunction);
 
 $.ajax({
-  url: "/data/NewMat_S2_Sig1.csv",
+  url: "./data/NewMat_S2_Sig1.csv",
   dataType: "text",
 }).done(successFunction);
 
 $.ajax({
-  url: "/data/NewMat_S2_Sig2.csv",
+  url: "./data/NewMat_S2_Sig2.csv",
   dataType: "text",
 }).done(successFunction);
 
@@ -127,12 +127,12 @@ var svg_2 = d3
   .append("g")
     .attr("transform", "translate(" + margin.gleft + "," + margin.top + ")");
 
-drawPlot("/data/NewMat_S1_Sig0_data.csv", svg0);
-drawPlot("/data/NewMat_S1_Sig1_data.csv", svg1);
-drawPlot("/data/NewMat_S1_Sig2_data.csv", svg2);
-drawPlot("/data/NewMat_S2_Sig0_data.csv", svg_0);
-drawPlot("/data/NewMat_S2_Sig1_data.csv", svg_1);
-drawPlot("/data/NewMat_S2_Sig2_data.csv", svg_2);
+drawPlot("./data/NewMat_S1_Sig0_data.csv", svg0);
+drawPlot("./data/NewMat_S1_Sig1_data.csv", svg1);
+drawPlot("./data/NewMat_S1_Sig2_data.csv", svg2);
+drawPlot("./data/NewMat_S2_Sig0_data.csv", svg_0);
+drawPlot("./data/NewMat_S2_Sig1_data.csv", svg_1);
+drawPlot("./data/NewMat_S2_Sig2_data.csv", svg_2);
 
 function drawPlot(name, svg) {
   d3.csv(name, function (data) {
