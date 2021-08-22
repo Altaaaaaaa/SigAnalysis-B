@@ -13,22 +13,24 @@
 
       <h2>mutational process</h2>
       <p>
-        This represents the result of Sigprofiler.<br>
+        This represents the result of Sigprofiler.<br><br>
       </p>
       <div class="n-ex">
-        <br>
-        <img src="./img/5.png">
+        <img src="./img/SBS96_selection_plot_1.png">
         <p style="text-align: left;">
-          <br>
-          Identifying the number, <b>N</b>, of mutational processes operative in a set of cancer genomes is required
-          prior to deciphering their signatures. For every N, we evaluate the similarity between the extracted 
-          processes (i.e., <b>process reproducibility</b>) from stochastically initialized iterations.
-          <br>For every N, we approach assesses the average Frobenius reconstruction error of the averaged 
-          deciphered signatures P and their strengths E. Low reconstruction error is indicative of an accurate 
-          description of the original cancer genome catalogs. We select the value of N for <b>which the extracted 
-          processes are reproducible and the reconstruction error is low.</b>
-          <br>In that set, the reconstruction error is the lowest when N is 3,
-          <br>so <b>the value of N was selected as 3.<b>
+          Identifying the number, <b>N</b>, of mutational processes operative in<br>
+          a set of cancer genomes is required prior to deciphering their<br>
+          signatures. For every N, we evaluate the similarity between the<br>
+          extracted processes (i.e., <b>process reproducibility</b>) from<br>
+          stochastically initialized iterations.<br>
+          For every N, we approach assesses the average Frobenius<br>
+          reconstruction error of the averaged deciphered signatures P<br>
+          and their strengths E. Low reconstruction error is indicative of<br>
+          an accurate description of the original cancer genome catalogs.<br>
+          We select the value of N for <b>which the extracted <br>
+          processes are reproducible and the reconstruction error is low.</b><br>
+          In that set, the reconstruction error is the lowest when N is 3,<br>
+          so <b>the value of N was selected as 3.</b>
           <br>
         </p>
       </div>
@@ -36,14 +38,12 @@
       <h3>Sigprofiler output(N=3)</h3>
       <div class="slider-1">
         <div class="slides">
-            <div class="active" style="background-image:url(./img/4.png); height: 520px;"></div>
-            <div style="background-image:url(./img/1.png); height: 520px;"></div>
-            <div style="background-image:url(./img/2.png); height: 520px;"></div>
-            <div style="background-image:url(./img/3.png); height: 520px;"></div>
+            <div class="active" style="background-image:url(./img/SBS_96_plots_SBS96_De-Novo_1.png); height: 240px; object-fit: cover;"></div> <!--시그니쳐 개수대로 만들어야함-->
+            <div style="background-image:url(./img/SBS_96_plots_SBS96_De-Novo_2.png); height: 240px; object-fit : cover"></div>
+            <div style="background-image:url(./img/SBS_96_plots_SBS96_De-Novo_3.png); height: 240px; object-fit: cover"></div>
         </div>
-        <div class="page-btns">
+        <div class="page-btns"> <!--버튼 개수 = 시그니쳐 개수-->
             <div class="active"></div>
-            <div></div>
             <div></div>
             <div></div>
         </div>
@@ -56,24 +56,26 @@
             </div>
         </div>
         <div class="figure-ex">
-          <div class="active"><div style="font-weight: bolder;">Figure 1</div>mutations in genomes for samples</div>
-          <div><div style="font-weight: bolder;">Figure 2. Signature 1 of 3</div>Three mutational signatures deciphered from the base substitutions identified in samples.</div>
-          <div><div style="font-weight: bolder;">Figure 3. Signature 2 of 3</div>Three mutational signatures deciphered from the base substitutions identified in samples.</div>
-          <div><div style="font-weight: bolder;">Figure 4. Signature 3 of 3</div>Three mutational signatures deciphered from the base substitutions identified in samples.</div>
+          <div class="active"><div style="font-weight: bolder;">Figure 1. Signature 1 of 3</div>Three mutational signatures deciphered from the base substitutions identified in samples.</div>
+          <div><div style="font-weight: bolder;">Figure 2. Signature 2 of 3</div>Three mutational signatures deciphered from the base substitutions identified in samples.</div>
+          <div><div style="font-weight: bolder;">Figure 3. Signature 3 of 3</div>Three mutational signatures deciphered from the base substitutions identified in samples.</div>
         </div>
       </div>
       <div class="heatmap">
-      <h3>Each Signature / COSMIC cosine similarity</h3>
-      <img src="./img/Heatmap.png">
-      <p>
-        image<br>
-      </p>
+        <h3>Each Signature / COSMIC cosine similarity</h3>
+        <div class="hmimg">
+        <img src="./img/Heatmap.png">
+        </div>
+        <p>
+          image-ex<br>
+          image-ex<br>
+        </p>
       </div>
         
     </div>
       <br><br><hr width="1500px"><br>
       <h2>timeseries analysis</h2>
-      <div class="timeseries-ex"style="text-align: left;">
+      <div class="timeseries-ex" style="text-align: left;">
         As mentioned above, we used <b>data deciphered into three signatures</b>. Then, <b>contributions to the 
         signature for each mutation type</b> were used to find out which signature was caused by more 
         operative for each mutation.
@@ -87,28 +89,35 @@
       </div>
       <p>
         timeseries analysis of SAMPLE1&nbsp;&nbsp;=>&nbsp;&nbsp;
-        <a href="./data/NewMat_S1.csv">file1</a>
+        <a href="./data/NewMat_S1.csv">file</a>
+        <!-- 삭제
         <br>
         timeseries analysis of SAMPLE2&nbsp;&nbsp;=>&nbsp;&nbsp;
         <a href="./data/NewMat_S2.csv">file2</a>
+        -->
         <br><br>
         From the timeseries analysis of the samples, only the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b> were selected.
       </p>
       <br>
+      <div class="tab-select-outer" style="height: 50px;">
+        <select id="tab-select" onchange="Show_hidden(this.value);">
+          <option value="0" selected="selected">Select Signature</option>
+          <option value="1">SIGNATUER 1</option>
+          <option value="2">SIGNATUER 2</option>
+          <option value="3">SIGNATUER 3</option>
+        </select>
+      </div> 
       <div class="container">
+        <div id="tab-x" class="tab-content" style="display: block;">
 
-        <ul class="tabs">
-          <li class="tab-link current" data-tab="tab-1">Sample1 SIGNATURE 0</li>
-          <li class="tab-link" data-tab="tab-2">Sample1 SIGNATURE 1</li>
-          <li class="tab-link" data-tab="tab-3">Sample1 SIGNATURE 2</li>
-          <li class="tab-link" data-tab="tab-4">Sample2 SIGNATURE 0</li>
-          <li class="tab-link" data-tab="tab-5">Sample2 SIGNATURE 1</li>
-          <li class="tab-link" data-tab="tab-6">Sample2 SIGNATURE 2</li>
-        </ul>
-      
-        <div id="tab-1" class="tab-content current">
+        </div>
+        <div id="tab-1" class="tab-content" style="display: none;">
           <h3>Sample1 SIGNATURE 0</h3>
           <div class="table0"></div>
+          <p>
+            <b>Show More</b>&nbsp;&nbsp;=>&nbsp;&nbsp;
+            <a href="./data/NewMat_S2.csv">file</a>
+          </p>
           <p>
             In Signature0 of Sample1, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
           </p>
@@ -118,9 +127,13 @@
             Compare DESeq and mutation graphs at each TimePoint
           </p>
         </div>
-        <div id="tab-2" class="tab-content">
+        <div id="tab-2" class="tab-content" style="display: none;">
           <h3>Sample1 SIGNATURE 1</h3>
           <div class="table1"></div>
+          <p>
+            <b>Show More</b>&nbsp;&nbsp;=>&nbsp;&nbsp;
+            <a href="./data/NewMat_S2.csv">file</a>
+          </p>
           <p>
             In Signature1 of Sample1, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
           </p>
@@ -130,50 +143,18 @@
             Compare DESeq and mutation graphs at each TimePoint
           </p>
         </div>
-        <div id="tab-3" class="tab-content">
+        <div id="tab-3" class="tab-content" style="display: none;">
           <h3>Sample1 SIGNATURE 2</h3>
           <div class="table2"></div>
+          <p>
+            <b>Show More</b>&nbsp;&nbsp;=>&nbsp;&nbsp;
+            <a href="./data/NewMat_S2.csv">file</a>
+          </p>
           <p>
             In Signature2 of Sample1, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
           </p>
           <br>
           <div id="my_dataviz2"></div>
-          <p>
-            Compare DESeq and mutation graphs at each TimePoint
-          </p>  
-        </div>
-        <div id="tab-4" class="tab-content">
-          <h3>Sample2 SIGNATURE 0</h3>
-          <div class="table3"></div>
-          <p>
-            In Signature0 of Sample2, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
-          </p>
-          <br>
-          <div id="my_dataviz_0"></div>
-          <p>
-            Compare DESeq and mutation graphs at each TimePoint
-          </p>
-        </div>
-        <div id="tab-5" class="tab-content">
-          <h3>Sample2 SIGNATURE 1</h3>
-          <div class="table4"></div>
-          <p>
-            In Signature1 of Sample2, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
-          </p>
-          <br>
-          <div id="my_dataviz_1"></div>
-          <p>
-            Compare DESeq and mutation graphs at each TimePoint
-          </p>
-        </div>
-        <div id="tab-6" class="tab-content">
-          <h3>Sample2 SIGNATURE 2</h3>
-          <div class="table5"></div>
-          <p>
-            In Signature2 of Sample2, the values satisfying <b>'correlation <= -0.9, p-value <= 0.05'</b>
-          </p>
-          <br>
-          <div id="my_dataviz_2"></div>
           <p>
             Compare DESeq and mutation graphs at each TimePoint
           </p>  

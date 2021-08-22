@@ -115,6 +115,18 @@ p {
     font-size: 100%;
 }
 
+select {
+  width: 200px; /* 원하는 너비설정 */
+  padding: .8em .5em; /* 여백으로 높이 설정 */
+  font-family: inherit; /* 폰트 상속 */
+  background: url(./img/select.png) no-repeat 95% 50%; /* 네이티브 화살표 대체 */
+  border: 1px solid #999; border-radius: 0px; /* iOS 둥근모서리 제거 */
+  -webkit-appearance: none; /* 네이티브 외형 감추기 */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/*
 ul.tabs {
   margin: 0px;
   padding: 0px;
@@ -131,9 +143,9 @@ ul.tabs li {
 ul.tabs li.current {
   background: #ebedfa;
   color: #222;
-}
+}*/
 
-.tab-content {
+.tab-content0, .tab-content1, .tab-content2, .tab-content3 {
   display: none;
   background: #ebedfa;
   padding: 15px;
@@ -147,8 +159,8 @@ ul.tabs li.current {
 
 /* 슬라이더 1 시작 */
 .slider-1 {
-    height:590px;
-    width: 1000px;
+    height: 320px;
+    width: 1050px;
     margin: 20px auto; /*50px 400px;*/
     position:relative;
 }
@@ -239,30 +251,41 @@ ul.tabs li.current {
 /* 슬라이더 1 끝 */
 
 .heatmap {
-    width: 80%;
-    height: 420px;
+    width: 90%;
+    height: 350px;
     margin: 20px auto;
 }
 .heatmap img {
-    width: 1350px;
+    height: 220px;
     image-rendering: -webkit-optimize-contrast;
+}
+.heatmap > .hmimg {
+  width: 1000px;
+  margin: 10px auto;
+  overflow: auto;
 }
 
 .n-ex {
-    width: 80%;
-    height: 420px;
+    width: 90%;
+    height: 360px;
     margin: 20px auto;
+    text-align: center;
 }
 
 .n-ex img {
-    width: 700px;
+    width: 550px;
     float: left;
+    position: absolute;
+    right: 50%;
 }
 
 .n-ex p {
     width: 40%;
-    float: left;
     padding-left: 20px;
+    font-size: 100%;
+    font-weight: 100;
+    position: absolute;
+    left: 50%;
 }
 
 .timeseries-ex {

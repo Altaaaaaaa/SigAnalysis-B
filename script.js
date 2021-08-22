@@ -330,17 +330,16 @@ function drawPlot(name, svg) {
   }
 }
 
-$(document).ready(function () {
-  $("ul.tabs li").click(function () {
-    var tab_id = $(this).attr("data-tab");
-
-    $("ul.tabs li").removeClass("current");
-    $(".tab-content").removeClass("current");
-
-    $(this).addClass("current");
-    $("#" + tab_id).addClass("current");
-  });
-});
+function Show_hidden(e){
+  var menu = new Array("tab-x","tab-1","tab-2","tab-3"); // 객체 배열로 지정
+  for(var i=0;i < menu.length;i++){
+   if("tab-"+e==menu[i]){
+    document.all[menu[i]].style.display="block";
+   }else{
+    document.all[menu[i]].style.display="none";
+   }
+  }
+ }  
 
 // 기존 버튼형 슬라이더
 $('.slider-1 > .page-btns > div').click(function(){
