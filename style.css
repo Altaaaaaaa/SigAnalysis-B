@@ -145,7 +145,7 @@ ul.tabs li.current {
   color: #222;
 }*/
 
-.tab-content0, .tab-content1, .tab-content2, .tab-content3 {
+.tab-content {
   display: none;
   background: #ebedfa;
   padding: 15px;
