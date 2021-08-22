@@ -294,3 +294,26 @@ ul.tabs li.current {
     font-size: 120%;
     font-weight: 100;
 }
+
+footer {
+  background: #ebedfa;
+  padding: 15px;
+  font-size: small;
+  text-align: right;
+}
+
+footer a{
+  text-decoration: underline #7e8b93 1px;
+  color: #000;
+}
+
+footer p{
+  display: block;
+  font-size: 90%;
+  margin: 3px 0px;
+}
+
+footer address { 
+  display: block;
+  font-style: italic;
+}
