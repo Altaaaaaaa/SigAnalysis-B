@@ -2,12 +2,12 @@
 
 let count = 0;
 $.ajax({
-  url: "./data/NewMat_S1_Sig0.csv",
+  url: "./data/TableMat_Sig0.csv",
   dataType: "text",
 }).done(successFunction);
 
 $.ajax({
-  url: "./data/NewMat_S1_Sig1.csv",
+  url: "./data/TableMat_Sig1.csv",
   dataType: "text",
 }).done(successFunction);
 
