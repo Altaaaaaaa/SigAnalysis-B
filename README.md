@@ -15,7 +15,7 @@ In the command line, please run the following:
 $ python CODE.py --data_folder=[datafolder name] --deseq_folder=[deseq result foloder name]
 ```
 
-[datafolder name] => yMat = mutation count(vcf file to csv), result of Sigprofiler
+[datafolder name] => yMat = mutation count(vcf file to csv), result of Sigprofiler  
 [deseqfolder name] => result of DESeq(tsv)
 
 
