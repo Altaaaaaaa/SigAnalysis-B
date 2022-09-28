@@ -28,3 +28,8 @@ $ python CODE.py --data_folder=[datafolder name] --deseq_folder=[deseq result fo
 |  | **DESeq data** | String | DESeq represents the result of DEG analysis by obtaining the LogFC value of the mutation dataset, and refers to gene expression data. | 
 |  | **Used data** | String | DESeq represents the result of DEG analysis by obtaining the LogFC value of the mutation dataset, and refers to gene expression data. | 
 |  | **data** | String | <ul><li>COSMIC signature: 30 signature data already analyzed</li><li>Gene-Gene link data: Gene-gen network data for signature classification</li></ul> |
+| **Output Data** |  |  | |
+|  | **result of sigprofiler** | String | Results of analyzing somatic mutation sample data using signature analysis tool called sigprofiler.(process and exposure data)  |
+|  | **heatmap** | Image | Heatmap to express the similarity between the most likely signatures analyzed using sigprofiler and already studied cosmic signature data through cosine similarity. | 
+|  | **gene data** | Table | The result of identifying the genes whose correlation and p-value between each contribution of the sample and the gene expression data satisfies a certain range. | 
+|  | **Results of node classification** | Image and Table | Through node classification, genes identified by multiple signatures are classified as single signatures that are most similar. | 
